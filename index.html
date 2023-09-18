@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>jQuery Tutorial</h1>
+    <p>By Saqlain Javed</p>
+
+    <button id="fadeout">BYEE</button>
+    <div class="puppers">
+      <img id="one" src="./img/dog-2.png" alt="" />
+      <img id="two" src="./img/dog-3.png" alt="" />
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("button#fadeout").click(function () {
+          $("#one").fadeOut("slow");
+          $("#two").fadeOut("fast");
+        });
+        $("button#fadein").click(function () {
+          $("#three").fadeToggle("fast");
+        });
+      });
+    </script>
+    <button id="fadein">Hello!</button>
+    <div class="fade">
+      <div
+        id="three"
+        style="
+          width: 150px;
+          height: 150px;
+          display: none;
+          background-color: orange;
+        "
+      ></div>
+    </div>
+
+    <!-- <input type="text" id="press" size="10" /> -->
+    <!-- <script>
+      $(document).ready(function () {
+        $("input").on("keypress", function () {
+          $("p:last").hide();
+        });
+      });
+    </script> -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          alert("Value: " + $("#sometext").val());
+        });
+      });
+    </script>
+
+    <input type="text" id="sometext" value="" />
+    <button>Submit</button> -->
+
+    <!-- <button class="button" id="hide">Hide</button>
+    <button class="button" id="show">Show</button>
+    <div class="puppers">
+      <img src="./img/dog-2.png" alt="" />
+      <img src="./img/dog-3.png" alt="" />
+      <img src="./img/dog-4.png" alt="" />
+    </div> -->
+
+    <!-- <script>
+      $(document).ready(function () {
+        $("#hide").click(function () {
+          $("img").hide();
+        });
+
+        $("#show").click(function () {
+          $("img").show();
+        });
+      });
+    </script> -->
+
+    <!-- <button id="addClass">Try addClass()</button>
+    <button id="toggleClass">Try toggleClass()</button>
+    <button id="removeClass">Try removeClass()</button>  -->
+    <!-- <script>
+        $(document).ready(function () {
+          $("button#addClass").click(function () {
+            $("img").addClass("styleclass");
+          });
+          $("button#toggleClass").click(function () {
+            $("img").toggleClass("styleclass");
+          });
+          $("button#removeClass").click(function () {
+            $("img").removeClass("styleclass");
+          });
+
+          $("img").click(function () {
+            $(this).hide();
+          });
+        });
+    </script> -->
+    <!-- <style>
+      .styleclass {
+        border: 5px solid green;
+      }
+    </style> -->
+
+    <!-- <ul>
+      <li>Golden Retriever</li>
+      <li>Siberian Husky</li>
+      <li>Boxer</li>
+    </ul> -->
+  </body>
+</html>
