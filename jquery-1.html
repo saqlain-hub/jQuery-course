@@ -1,3 +1,10 @@
+<!-- 
+  jQuery selectors
+  jQuery events
+  jQuery effects
+  jQuery functions
+ -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,16 +14,37 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1>jQuery Tutorial</h1>
+    <button id="btn-1">Slide Down</button>
+    <button id="btn-2">Slide Up</button>
+    <button id="btn-3">Slide Toggle</button>
+    <div
+      id="div1"
+      style="width: 90px; height: 60px; display: none; background-color: pink"
+    ></div>
+
+    <script>
+      $("button#btn-1").on("click", function () {
+        $("#div1").slideDown("fast");
+      });
+      $("button#btn-2").on("click", function () {
+        $("#div1").slideUp("slow");
+      });
+
+      $("button#btn-3").on("click", function () {
+        $("#div1").slideToggle("slow");
+      });
+    </script>
+
+    <!-- <h1>jQuery Tutorial</h1>
     <p>By Saqlain Javed</p>
 
     <button id="fadeout">BYEE</button>
     <div class="puppers">
       <img id="one" src="./img/dog-2.png" alt="" />
       <img id="two" src="./img/dog-3.png" alt="" />
-    </div>
+    </div> -->
 
-    <script>
+    <!-- <script>
       $(document).ready(function () {
         $("button#fadeout").click(function () {
           $("#one").fadeOut("slow");
@@ -38,7 +66,7 @@
           background-color: orange;
         "
       ></div>
-    </div>
+    </div> -->
 
     <!-- <input type="text" id="press" size="10" /> -->
     <!-- <script>
