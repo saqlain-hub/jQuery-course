@@ -40,6 +40,7 @@
       <button id="btn-4">Double Click</button>
       <button id="btn-5">Hover</button>
       <button id="btn-6">Mousemove</button>
+      <button id="btn-7">Mousedown</button>
       <p class="para-1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi sequi
         error quae ipsum, quidem distinctio eum inventore, neque aperiam
@@ -47,6 +48,23 @@
         voluptatem eos molestias porro natus? Aliquid odio ab, debitis
         perspiciatis eos a inventore! Aperiam!
       </p>
+      <h3 id="coords"></h3>
+      <hr />
+      <form id="form">
+        <label>Name</label>
+        <input type="text" name="name" id="name" />
+        <br />
+        <label>Email</label>
+        <input type="email" name="email" id="email" />
+        <br />
+        <label>Gender</label>
+        <select name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
     </div>
 
     <script>
@@ -55,12 +73,17 @@
         // click
         // dblclick
         // hover --- mouseenter and mouseleave
+        // mousemove
+        // mouseup
+        // mousedown
         //-----------
         // Methods
         // on() method
         // hide() method
         // show() method
         // toggle() method
+        // html() method
+        // append() method
         // $("#btn-1").click(function () {
         //   alert("Button Clicked");
         // });
@@ -92,6 +115,41 @@
         // $("#btn-6").on("mousemove", function () {
         //   $(".para-1").toggle();
         // });
+        // $("#btn-7").on("mousedown", function () {
+        //   $(".para-1").hide();
+        // });
+        // $("#btn-7").on("mouseup", function () {
+        //   $(".para-1").show();
+        // });
+        // $("#btn-1").click(function (e) {
+        //   console.log(e.currentTarget.id);
+        //   console.log(e.currentTarget.innerHTML);
+        //   console.log(e.currentTarget.outerHTML);
+        // });
+        // $(document).on("mousemove", function (e) {
+        //   $("#coords").html("Coords: Y: " + e.clientY + " X: " + e.clientY);
+        // });
+        // Form
+        // $("input").focus(function () {
+        //   //   alert("Focus");
+        //   $(this).css("background", "pink");
+        // });
+        // $("input").blur(function () {
+        //   $(this).css("background", "white");
+        // });
+        // $("input").keyup(function (e) {
+        //   console.log(e.target.value);
+        // });
+
+        $("select#gender").change(function (e) {
+          alert(e.target.value);
+        });
+
+        $("#form").submit(function (e) {
+          e.preventDefault();
+          var name = $("input#name").val();
+          console.log(name);
+        });
       });
     </script>
   </body>
