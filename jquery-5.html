@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="./jquery.min.js"></script>
+    <title>jQuery Crash Course</title>
+
+    <style>
+      body {
+        font-size: 17px;
+        font-family: arial;
+        background-color: #f4f4f4;
+        line-height: 1.5em;
+      }
+      header {
+        background: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 4px #000 solid;
+        margin-bottom: 10px;
+      }
+      #container {
+        width: 90%;
+        margin: auto;
+        padding: 10px;
+      }
+      .myClass {
+        color: blue;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>jQuery Crash Course | DOM Manipulation</h1>
+    </header>
+    <div id="container">
+      <button id="btn-1">Button 1</button>
+      <p class="para-1">This is a paragraph</p>
+      <p class="para-2">This is another paragraph</p>
+      <div id="myDiv"></div>
+      <input type="text" id="newItem" />
+
+      <ul id="list">
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+      </ul>
+      <a href="google.com">google</a>
+      <ul id="users"></ul>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        /*
+        Methods
+        css() apply css - property, value or object {value:pair}
+
+        addClass() add class
+        removeClass() remove class
+        text() add text or return text
+        html() add html to document or return html
+        append() append some node
+        appendTo() append an existing node to some other node
+        prepend() add a node before selected node
+        prependTo() add an existing node before another node
+
+        before() adds a node before selected node
+        after() adds a node a after a selected noe
+
+        empty() clears everything from within a node
+
+        detach() clears everything inside a node and node itself
+
+        attr() add an attribute to a node
+
+        attrRemove() remove an attribute from a node
+
+        wrap() to wrap an html element within another
+
+        wrapAll() wraps all selected html elements in a single elements
+
+        toArray() to assign/convert html nodes to an array
+
+        */
+        // $("p.para-1").css("color", "red");
+        // $("p.para-1").css({ color: "red", background: "#ccc" });
+        // $("p.para-2").addClass("myClass");
+        // $("p.para-2").removeClass("myClass");
+        // $("#btn-1").click(function () {
+        //   $("p.para-2").toggleClass("myClass");
+        // });
+        // $("#myDiv").text("Hello World");
+        // $("#myDiv").html("<h3>Hello World</h3>");
+        // $("#btn-1").click(function () {
+        //   alert($("#myDiv").text());
+        // });
+        /*
+        $("ul").append("<li>Append List Item");
+        $("ul").prepend("<li>Prepend List Item");
+
+        $(".para-1").appendTo(".para-2");
+        $(".para-1").prependTo(".para-2");
+
+        $("ul").before("<h4>Hello</h4>");
+        $("ul").after("<h4>World</h4>");
+
+        $("ul").empty();
+        $("ul").detach();
+
+        $("a").attr("target", "_blank");
+        alert($("a").attr("href"));
+        $("a").removeAttr("target");
+        $("p").wrap("<h1>");
+        $("p").wrapAll("<h1>");
+        $("#newItem").on("keyup", function (e) {
+          var code = e.which;
+          if (code == 13) {
+            e.preventDefault();
+            $("ul").append("<li>" + e.target.value + "</li>");
+          }
+        });
+
+         var myArr = ["Brad", "Kelley", "Nate", "Jose"];
+
+        $.each(myArr, function (i, val) {
+          $("#users").append("<li>" + val + "</li>");
+        });
+
+        var newArr = $("ul#list li").toArray();
+        $.each(newArr, function (i, val) {
+          console.log(val.innerHTML);
+        });
+        */
+      });
+    </script>
+  </body>
+</html>
